@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h2{
+    text-align: center;
+
+    color: rgba(97,96,96);
+    margin: 20px auto;
+
+}
+ 
+.descripcion{
+    text-align: center;
+    color:white;
+  
+   
+  
+}
+.card{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    flex-wrap: wrap;
+    gap:40px;
+    justify-content: center;
+    margin: 0 auto;
+    background: url(../image/emily-bernal-v9vII5gV8Lw-unsplash.jpg);
+    background-size: cover;
+    border-radius: 40px;
+   
+   
+    
+    
+
+}
+.blanco{
+    color: white;
+       text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8), 
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.3);
+}
+.card_perfil{
+        width: 200px;
+     box-shadow: 2px 2px 5px black;
+    border :6px solid white;
+    border-radius: 40px;
+ 
+    }
+
+img{
+
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    border-radius:50%;
+}
+.uno{
+    background:rgba(205,127,50, 0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.5);
+
+}
+.dos{
+     background:rgba(192,192,192, 0.5);
+     border-left: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.5);
+
+}
+.tres{
+  background:rgba(218,165,32, 0.5);
+     border-left: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+     border-right: 1px solid rgba(255,255,255,0.5);
+}
+p{
+    font-size: 10px;
+}
+.big{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    
+   
+    }
+.card_perfil {
+    height: 300px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Movimiento suave */
+    cursor: pointer;
+}
+.card_perfil:hover {
+    transform: translateY(-10px); /* Sube la tarjeta */
+    border-color: rgba(255, 255, 255, 0.8); /* El borde resalta */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    background: rgba(255, 255, 255, 0.15); /* Se aclara ligeramente el fondo */
+}
+#ofertaredes {
+    display: flex;
+    flex-direction: column; /* Pone el título arriba y las cards abajo */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh;      /* Asegura que use toda la altura de la pantalla */
+    padding: 40px 0;
+}
+@media only screen and (max-width: 767px) {
+    #ofertaredes {
+    display: block
+    
+}
+  
+}
+    
+
