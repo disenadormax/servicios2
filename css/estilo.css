@@ -48,8 +48,11 @@ h2{
         width: 200px;
      box-shadow: 2px 2px 5px black;
     border :6px solid white;
-    border-radius: 40px;
- 
+    border-radius: 40px;            
+    min-height: 400px; 
+    height: auto;   
+    padding: 40px 20px;
+    box-sizing: border-box;
     }
 
 img{
@@ -90,11 +93,60 @@ p{
     
    
     }
-.card_perfil {
-    height: 300px;
+
+@media (max-width: 768px) {
+    
+    #ofertaredes {
+        /* Cambiamos a columna para que las cards se apilen */
+        flex-direction: column; 
+        padding: 20px;
+        height: auto; /* Permite que el contenedor crezca con el contenido */
+        min-height: auto; 
+    }
+
+    .card_perfil {
+        /* Ajustamos el ancho al 90% para que no toquen los bordes del cel */
+        width: 90%; 
+        max-width: 350px;
+        margin-bottom: 20px; /* Separación entre tarjetas */
+         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Movimiento suave */
+    cursor: pointer;
+        padding: 30px 20px;            /* Espacio interno arriba/abajo y a los lados */
+    box-sizing: border-box;         /* Evita que el padding rompa el tamaño de la card */
+   
+    }
+    
+    
+    
+    
+    
+    /* Opcional: Si el título se ve muy grande, puedes ajustarlo aquí */
+    #ofertaredes h2 { 
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+.card_perfil:hover {
+    transform: translateY(-10px); /* Sube la tarjeta */
+    border-color: rgba(255, 255, 255, 0.8); /* El borde resalta */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    background: rgba(255, 255, 255, 0.15); /* Se aclara ligeramente el fondo */
+}
+
+
+@media (min-width: 1024px) {
+    .card_perfil {
+   
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Movimiento suave */
     cursor: pointer;
-}
+ min-height: 100px; 
+   
+        padding: 15px 20px;
+        
+    
+    }
+    
+    
 .card_perfil:hover {
     transform: translateY(-10px); /* Sube la tarjeta */
     border-color: rgba(255, 255, 255, 0.8); /* El borde resalta */
@@ -109,12 +161,9 @@ p{
     min-height: 100vh;      /* Asegura que use toda la altura de la pantalla */
     padding: 40px 0;
 }
-@media only screen and (max-width: 767px) {
-    #ofertaredes {
-    display: block
     
-}
   
 }
     
+
 
